@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>团队访谈与调查问卷</title>
+<style>
+    body { font-family: "Microsoft YaHei", sans-serif; margin: 20px; background-color: #f9fbfd; color: #333; }
+    h1, h2, h3 { color: #0056b3; }
+    section { background: white; border-radius: 10px; padding: 20px; margin-bottom: 25px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    label { display: block; margin: 6px 0; }
+    textarea { width: 100%; height: 80px; border-radius: 6px; border: 1px solid #ccc; padding: 6px; font-size: 14px; resize: vertical; }
+    input[type="text"] { width: 100%; border-radius: 6px; border: 1px solid #ccc; padding: 6px; margin-top: 5px; }
+    input[type="checkbox"], input[type="radio"] { margin-right: 6px; }
+    button { margin-right: 10px; background-color: #0056b3; color: white; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; }
+    button:hover { background-color: #003d80; }
+    .question { margin-bottom: 18px; }
+
+    /* 新增样式：历史记录面板 */
+    .records-panel { position: fixed; right: 20px; top: 20px; width: 480px; max-height: 80vh; overflow:auto; background:#fff; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.15); padding:12px; display:none; z-index:1000; }
+    .records-panel h3 { margin:0 0 8px 0; color:#004082; }
+    .record-item { border-bottom:1px solid #eee; padding:8px 0; }
+    .small { color:#666; font-size:12px; }
+    .secondary { background:#e0e6ef; color:#003d80; padding:6px 8px; border-radius:6px; margin-left:6px; }
+</style>
+</head>
+<body>
+
+<h1>团队访谈与调查问卷</h1>
+
+<section>
+    <h2>团队介绍</h2>
+    <p>我们是校园节能提醒与智能控制 App 项目的研发团队，致力于通过智能技术帮助师生节约能源，提升校园可持续发展水平。</p>
+</section>
+
+<section>
+    <h2>项目提案</h2>
+    <p>本项目旨在设计一款校园节能提醒与自动控制 App，通过实时数据采集与智能算法，帮助用户了解用能行为、识别浪费环节，并提供个性化节能建议。</p>
+    <p>应用将支持宿舍与教室的能耗监测、节能排行榜、定时开关等功能，最终实现高效、可持续的校园能源管理体系。</p>
+</section>
+
+<section id="interview">
+    <h2>一．访谈</h2>
+    <p>您好，非常感谢您参与我们关于“校园节能提醒与智能控制 app”的用户访谈。以下问题旨在了解您在校园能源使用中的习惯与需求。</p>
+
+    <div class="question">
+        <h3>热身问题</h3>
+        <label>为了方便我们了解您的背景，请简单介绍一下自己（年级、专业、日常场景等）：</label>
+        <textarea id="introduction"></textarea>
+    </div>
+
+    <h3>Topic 1：节能习惯与认知</h3>
+    <div class="question"><label>1. 在日常校园生活中，您通常会在哪些场景下关注能源使用问题？</label><textarea id="topic1q1"></textarea></div>
+    <div class="question"><label>2. 您是否会主动在离开教室、宿舍或实验室时关闭电源？为什么？</label><textarea id="topic1q2"></textarea></div>
+    <div class="question"><label>3. 在节能方面，您觉得目前自己遇到的最大困难或挑战是什么？</label><textarea id="topic1q3"></textarea></div>
+    <div class="question"><label>4. 如果有一个校园节能提醒类的 app，您最希望它提供哪些功能？</label><textarea id="topic1q4"></textarea></div>
+    <div class="question"><label>5. 您是否使用过类似的节能类应用或硬件设备？如果是，请分享您的经验。</label><textarea id="topic1q5"></textarea></div>
+
+    <h3>Topic 2：校园日常流程与能源使用</h3>
+    <div class="question"><label>1. 能否描述一下您最近在教室或宿舍的一次典型用电流程？</label><textarea id="topic2q1"></textarea></div>
+    <div class="question"><label>2. 在这个过程中，哪一个环节最容易出现能源浪费？为什么？</label><textarea id="topic2q2"></textarea></div>
+    <div class="question"><label>3. 如果由您来安排节能优先级，您觉得哪些用电设备应当优先提醒或自动控制？</label><textarea id="topic2q3"></textarea></div>
+    <div class="question"><label>4. 请用 1 到 5 分评价您对当前校园节能管理措施的满意度，并说明原因。</label><textarea id="topic2q4"></textarea></div>
+    <div class="question"><label>5. 如果让您用三句话总结当前的校园能源使用情况，您会怎么描述？为什么？</label><textarea id="topic2q5"></textarea></div>
+
+    <h3>Topic 3：信息获取与协作</h3>
+    <div class="question"><label>1. 您通常通过哪些渠道了解节能信息？为什么？</label><textarea id="topic3q1"></textarea></div>
+    <div class="question"><label>2. 当您需要确认能源浪费时，您通常会遇到哪些困难？</label><textarea id="topic3q2"></textarea></div>
+    <div class="question"><label>3. 在宿舍或班级层面，节能是否需要依赖他人的配合？影响如何？</label><textarea id="topic3q3"></textarea></div>
+    <div class="question"><label>4. 您更倾向于通过什么方式共享节能信息？为什么？</label><textarea id="topic3q4"></textarea></div>
+    <div class="question"><label>5. 如果未来有节能 app 能推送提醒，您最希望它解决哪些问题？</label><textarea id="topic3q5"></textarea></div>
+
+    <h3>Closing</h3>
+    <div class="question"><label>1. 如果您还有其他想要分享的意见或建议，请填写：</label><textarea id="开放问题"></textarea></div>
+</section>
+
+<section id="survey">
+    <h2>二．调查问卷</h2>
+
+    <div class="question">
+        <label>1. 您的身份是？</label>
+        <label><input type="radio" name="q1" value="本科生">本科生</label>
+        <label><input type="radio" name="q1" value="研究生">研究生</label>
+        <label><input type="radio" name="q1" value="教师/职工">教师/职工</label>
+        <label><input type="radio" name="q1" value="其他">其他</label>
+    </div>
+
+    <div class="question">
+        <label>2. 您所在的宿舍/班级人数是多少？</label>
+        <label><input type="radio" name="q2" value="1人">1人</label>
+        <label><input type="radio" name="q2" value="2-4人">2-4人</label>
+        <label><input type="radio" name="q2" value="5-8人">5-8人</label>
+        <label><input type="radio" name="q2" value="8人以上">8人以上</label>
+    </div>
+
+    <div class="question">
+        <label>3. 您在日常生活中最常使用的用电设备是？（可多选）</label>
+        <label><input type="checkbox" name="q3" value="照明">照明</label>
+        <label><input type="checkbox" name="q3" value="空调">空调</label>
+        <label><input type="checkbox" name="q3" value="电扇">电扇</label>
+        <label><input type="checkbox" name="q3" value="电脑/实验设备">电脑/实验设备</label>
+        <label><input type="checkbox" name="q3" value="其他">其他：</label>
+        <input type="text" id="q3">
+    </div>
+
+    <div class="question">
+        <label>4. 您在校园中使用能源时最关心的因素是？（可多选）</label>
+        <label><input type="checkbox" name="q4" value="舒适度">舒适度（如空调温度）</label>
+        <label><input type="checkbox" name="q4" value="成本节约">成本节约</label>
+        <label><input type="checkbox" name="q4" value="环保与可持续性">环保与可持续性</label>
+        <label><input type="checkbox" name="q4" value="使用便捷性">使用便捷性</label>
+        <label><input type="checkbox" name="q4" value="其他">其他：</label>
+        <input type="text" id="q4">
+    </div>
+
+    <div class="question">
+        <label>5. 您每天大约花费多少时间在使用电器设备上？</label>
+        <label><input type="radio" name="q5" value="1小时以内">1小时以内</label>
+        <label><input type="radio" name="q5" value="1-3小时">1-3小时</label>
+        <label><input type="radio" name="q5" value="3-6小时">3-6小时</label>
+        <label><input type="radio" name="q5" value="6小时以上">6小时以上</label>
+    </div>
+
+    <div class="question">
+        <label>6. 您是否经常遇到能源浪费的情况？如果是，主要原因是什么？（可多选）</label>
+        <label><input type="checkbox" name="q6" value="忘记关闭电器">忘记关闭电器</label>
+        <label><input type="checkbox" name="q6" value="缺乏统一管理">宿舍/教室缺乏统一管理</label>
+        <label><input type="checkbox" name="q6" value="缺少实时提醒">缺少实时提醒</label>
+        <label><input type="checkbox" name="q6" value="节能意识不足">个人节能意识不足</label>
+        <label><input type="checkbox" name="q6" value="其他">其他：</label>
+        <input type="text" id="q6">
+    </div>
+
+    <div class="question">
+        <label>7. 在节能措施上，您更倾向于哪种方式？</label>
+        <label><input type="radio" name="q7" value="个人主动节能">个人主动节能（随手关电）</label>
+        <label><input type="radio" name="q7" value="系统自动控制">系统自动控制（如人走电断）</label>
+        <label><input type="radio" name="q7" value="集体约定与监督">集体约定与监督</label>
+        <label><input type="radio" name="q7" value="其他">其他：</label>
+        <input type="text" id="q7">
+    </div>
+
+    <div class="question">
+        <label>8. 您希望通过什么方式来跟踪用电情况？</label>
+        <label><input type="radio" name="q8" value="实时能耗数据">实时能耗数据</label>
+        <label><input type="radio" name="q8" value="统计报告">每日/每周统计报告</label>
+        <label><input type="radio" name="q8" value="节能排行榜">节能排行榜</label>
+        <label><input type="radio" name="q8" value="其他">其他：</label>
+        <input type="text" id="q8">
+    </div>
+
+    <div class="question">
+        <label>9. 您的宿舍/班级是否会定期讨论节能问题？</label>
+        <label><input type="radio" name="q9" value="经常">经常</label>
+        <label><input type="radio" name="q9" value="偶尔">偶尔</label>
+        <label><input type="radio" name="q9" value="很少">很少</label>
+        <label><input type="radio" name="q9" value="从不">从不</label>
+    </div>
+
+    <div class="question">
+        <label>10. 在校园内，您认为哪种提醒方式最有效？</label>
+        <label><input type="radio" name="q10" value="即时消息推送">即时消息推送</label>
+        <label><input type="radio" name="q10" value="公告栏宣传">公告栏宣传</label>
+        <label><input type="radio" name="q10" value="定时语音广播">定时语音广播</label>
+        <label><input type="radio" name="q10" value="节能app提醒">节能app提醒</label>
+        <label><input type="radio" name="q10" value="其他">其他：</label>
+        <input type="text" id="q10">
+    </div>
+
+    <div class="question">
+        <label>11. 您是否希望节能app能够设置优先级和紧急程度（如"高能耗提醒"）？</label>
+        <label><input type="radio" name="q11" value="经常使用">经常使用</label>
+        <label><input type="radio" name="q11" value="偶尔使用">偶尔使用</label>
+        <label><input type="radio" name="q11" value="不需要">不需要</label>
+    </div>
+
+    <div class="question">
+        <label>12. 您认为校园节能app最需要改进或增加哪些功能？</label>
+        <textarea id="q12"></textarea>
+    </div>
+
+    <div class="question">
+        <label>13. 在日常节能中，您是否遇到过"信息过载"或无法集中注意力的问题？</label>
+        <textarea id="q13"></textarea>
+    </div>
+
+    <div class="question">
+        <label>14. 您是否采用过一些方法来提高节能的灵活性，例如使用智能插座、语音助手等？</label>
+        <textarea id="q14"></textarea>
+    </div>
+
+    <div class="question">
+        <label>15. 请为以下方面打分（1=非常不满意，5=非常满意）</label>
+        <label>提醒有效性：<input type="number" min="1" max="5" id="q15_1"></label>
+        <label>功能多样性：<input type="number" min="1" max="5" id="q15_2"></label>
+        <label>协作与共享支持：<input type="number" min="1" max="5" id="q15_3"></label>
+        <label>技术可行性与安全性：<input type="number" min="1" max="5" id="q15_4"></label>
+    </div>
+
+</section>
+
+<section>
+    <button onclick="saveAnswers()"> 保存记录</button>
+    <button onclick="viewAnswers()"> 查看记录</button>
+    <button onclick="deleteAnswers()"> 删除记录</button>
+    <button onclick="clearAll()"> 清空所有</button>
+    <button onclick="exportCSV()"> 导出CSV</button>
+</section>
+
+<!-- 历史记录面板 -->
+<div id="recordsPanel" class="records-panel" aria-hidden="true" style="display:none">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px">
+    <h3>历史作答记录</h3>
+    <div>
+      <button onclick="closeRecords()" class="secondary">关闭</button>
+      <button onclick="clearAllRecords()" class="secondary">清空所有记录</button>
+    </div>
+  </div>
+  <div id="recordsList"></div>
+</div>
+
+<script>
+function loadRecords(){
+  return JSON.parse(localStorage.getItem('surveyRecords') || '[]');
+}
+function saveRecords(records){
+  localStorage.setItem('surveyRecords', JSON.stringify(records));
+}
+
+function saveAnswers() {
+    let data = {};
+    document.querySelectorAll('textarea, input[type=text], input[type=number]').forEach(e=>{
+        data[e.id || e.name] = e.value || "";
+    });
+    document.querySelectorAll('input[type=radio]:checked, input[type=checkbox]:checked').forEach(e=>{
+        if (!data[e.name]) data[e.name] = [];
+        data[e.name].push(e.value);
+    });
+    // 保存为最新快照（保留原有键 surveyData）
+    localStorage.setItem("surveyData", JSON.stringify(data));
+
+    // 追加到历史记录
+    const records = loadRecords();
+    records.push({ timestamp: Date.now(), answers: data });
+    saveRecords(records);
+
+    alert("答案已保存并加入历史记录！");
+}
+  // HTML 转义，避免展示时注入问题
+  function escapeHtml(str){
+    if (str == null) return '';
+    return String(str)
+      .replace(/&/g,'&amp;')
+      .replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;')
+      .replace(/'/g,'&#39;');
+  }
+
+  // 列出历史记录（每个题目答案独立一行）
+  function renderRecords(){
+    const panel = document.getElementById('recordsPanel');
+    const list = document.getElementById('recordsList');
+    list.innerHTML = '';
+    const records = loadRecords();
+    if (records.length === 0){
+      list.innerHTML = '<div class="small">未找到记录。</div>';
+    } else {
+      // 逆序显示最近的在前
+      records.slice().reverse().forEach((r, idx)=>{
+        const item = document.createElement('div');
+        item.className = 'record-item';
+        const no = records.length - idx;
+        const answers = r.answers || {};
+        // 将每个题目单独一行显示
+        const lines = Object.keys(answers).map(k=>{
+          const v = answers[k];
+          const val = Array.isArray(v) ? v.join(', ') : (v || '未填');
+          return `<div><strong>${escapeHtml(k)}</strong>: <span>${escapeHtml(val)}</span></div>`;
+        }).join('');
+        item.innerHTML = `
+          <div><strong>记录 #${no}</strong> <span class="small">（保存时间：${new Date(r.timestamp).toLocaleString()}）</span></div>
+          <div style="margin-top:6px">${lines}</div>
+          <div style="margin-top:8px">
+            <button data-index="${records.length-1-idx}" class="delBtn secondary">删除此记录</button>
+          </div>
+        `;
+        list.appendChild(item);
+      });
+    }
+    panel.style.display = 'block';
+    panel.setAttribute('aria-hidden','false');
+
+    // attach delete handlers
+    document.querySelectorAll('.delBtn').forEach(btn=>{
+      btn.addEventListener('click', e=>{
+        const i = Number(e.currentTarget.dataset.index);
+        const recs = loadRecords();
+        if (confirm('确认删除该记录？')){
+          recs.splice(i,1);
+          saveRecords(recs);
+          renderRecords();
+        }
+      });
+    });
+  }
+
+function viewAnswers(){
+  renderRecords();
+}
+
+function closeRecords(){
+  const panel = document.getElementById('recordsPanel');
+  panel.style.display = 'none';
+  panel.setAttribute('aria-hidden','true');
+}
+
+function clearAllRecords(){
+  if (!confirm('确认清空所有历史记录？')) return;
+  localStorage.removeItem('surveyRecords');
+  renderRecords();
+}
+
+/* 将原来的 deleteAnswers（注释版本）替换为删除 latest 快照或全部历史（此处实现清除最新 surveyData） */
+function deleteAnswers() {
+    if (!confirm("确认删除当前保存的最新记录？")) return;
+    localStorage.removeItem("surveyData");
+    alert("已删除最新保存的快照。");
+}
+
+function clearAll() {
+    if (confirm("确定清空所有输入吗？")) document.querySelectorAll("textarea, input").forEach(e=>{
+        if(e.type=="radio"||e.type=="checkbox") e.checked=false; else e.value="";
+    });
+}
+
+function exportCSV() {
+    const records = loadRecords();
+    if (!records.length) { alert("暂无数据可导出"); return; }
+    let csv = "记录编号,保存时间,问题,答案\n";
+    records.forEach((r, idx)=>{
+      const baseNo = idx+1;
+      const time = new Date(r.timestamp).toLocaleString();
+      Object.keys(r.answers).forEach(k=>{
+        const val = Array.isArray(r.answers[k]) ? r.answers[k].join(';') : r.answers[k];
+        csv += `"${baseNo}","${time}","${k}","${val}"\n`;
+      });
+    });
+    let blob = new Blob([csv], {type:"text/csv"});
+    let a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "问卷历史记录.csv";
+    a.click();
+}
+</script>
+
+</body>
+</html>

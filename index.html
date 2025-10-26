@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>校园节能提醒与智能控制 App — 项目首页</title>
+  <style>
+    :root{--bg:#f5f7fb;--card:#ffffff;--accent:#2b7cff;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans SC',"PingFang SC","Hiragino Sans GB",'Microsoft YaHei',sans-serif;background:var(--bg);color:#0f172a}
+    header{background:linear-gradient(135deg,#e6f0ff 0%, #ffffff 100%);padding:36px 20px;border-bottom:1px solid rgba(15,23,42,0.06)}
+    .container{max-width:1000px;margin:0 auto}
+    .title-row{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    h1{margin:0;font-size:24px;color:var(--accent)}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:28px}
+    .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+
+    .members{display:flex;flex-direction:column;gap:10px}
+    .member{display:flex;align-items:center;gap:12px}
+    .avatar{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#cfe4ff,#eaf4ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#0b3a8c}
+    .mr-info{line-height:1}
+    .mr-name{font-weight:600}
+    .mr-role{font-size:13px;color:var(--muted)}
+
+    .section-title{font-size:16px;margin:0 0 8px}
+    .desc p{margin:0 0 10px;color:#111827;white-space:pre-wrap}
+
+    .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid rgba(43,124,255,0.12);background:linear-gradient(180deg,#ffffff,#f0f6ff);color:var(--accent)}
+    .btn.ghost{background:transparent;border:1px dashed rgba(15,23,42,0.06);color:#334155}
+
+    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr;}
+      .container{padding:0 16px}
+      header{padding:28px 16px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="title-row">
+        <div>
+          <h1>校园节能提醒与智能控制 App</h1>
+          <p class="lead">团队项目 — 人机交互设计</p>
+        </div>
+        <div style="text-align:right;color:var(--muted);font-size:14px">页面：项目首页</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:20px 0">
+    <div class="grid">
+      <section class="card">
+        <h3 class="section-title">项目主要内容</h3>
+        <div class="desc">
+          <p>学习在人机交互设计中如何从真实场景中发现和提炼问题，并将其转化为可由智能手机应用解决的需求。学生需要能够描述问题发生的情境，分析问题的重要性，以及思考为什么智能手机应用是合适的解决方式。<br>通过这一过程，培养问题意识、用户需求分析能力和对交互设计合理性的理解，为后续的系统设计和原型开发奠定基础。</p>
+        </div>
+
+        <h4 style="margin-top:14px;margin-bottom:8px">目标</h4>
+        <ul style="margin:0 0 8px 20px;color:#111827">
+          <li>从校园节能场景中识别用户痛点与机会点。</li>
+          <li>将场景问题抽象成可实现的手机应用需求。</li>
+          <li>撰写场景描述、用户画像、使用流程与关键交互需求。</li>
+        </ul>
+
+        <div class="links">
+          <a class="btn" href="ex4.html">数据收集</a>
+          <a class="btn" href="b.html">跳转到 b.html</a>
+          <a class="btn" href="c.html">跳转到 c.html</a>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h3 class="section-title">团队成员</h3>
+        <div class="members">
+          <div class="member">
+            <div class="avatar">周</div>
+            <div class="mr-info">
+              <div class="mr-name">周博 </div>
+              <div class="mr-role">202218130282</div>
+            </div>
+          </div>
+
+          <div class="member">
+            <div class="avatar">唐</div>
+            <div class="mr-info">
+              <div class="mr-name">唐振元 </div>
+              <div class="mr-role">202200130113</div>
+            </div>
+          </div>
+
+          <div class="member">
+            <div class="avatar">阎</div>
+            <div class="mr-info">
+              <div class="mr-name">阎发祥 </div>
+              <div class="mr-role">202222130195</div>
+            </div>
+          </div>
+
+          <div class="member">
+            <div class="avatar">葛</div>
+            <div class="mr-info">
+              <div class="mr-name">葛峣</div>
+              <div class="mr-role">202200130001</div>
+            </div>
+          </div>
+        </div>
+
+        <hr style="margin:14px 0;border:none;border-top:1px solid rgba(15,23,42,0.06)">
+        
+      </aside>
+    </div>
+
+    <footer>
+      © 校园节能提醒与智能控制 App · 团队项目
+    </footer>
+  </main>
+</body>
+</html>

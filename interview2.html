@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>访谈记录 — Interview 2</title>
+  <style>
+    :root{--bg:#f7f8fb;--card:#fff;--muted:#666;--accent:#2b6cb0}
+    body{font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif; background:var(--bg); color:#222; margin:0;padding:24px}
+    .container{max-width:900px;margin:0 auto}
+    header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+    header h1{font-size:20px;margin:0}
+    .meta{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(20,30,50,0.06)}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    .field{min-width:180px}
+    .label{font-size:12px;color:var(--muted);}
+    .value{font-size:14px;margin-top:6px}
+    section.card{background:var(--card);margin-top:18px;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(20,30,50,0.04)}
+    h2{margin:0 0 8px 0;font-size:16px;color:var(--accent)}
+    .qa{margin-top:10px}
+    .qa p{margin:6px 0;padding:8px;border-radius:8px}
+    .question{background:#f0f6ff;border-left:4px solid var(--accent)}
+    .answer{background:#fbfcfd;border-left:4px solid #d1e3f8}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+    .tools{margin-top:12px;display:flex;gap:8px}
+    button{background:var(--accent);color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+    button.secondary{background:#eee;color:#333}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>访谈记录 — Interview 2</h1>
+      <div style="margin-left:auto;color:var(--muted)">项目：校园节能提醒与智能控制App</div>
+    </header>
+
+    <div class="meta">
+      <div class="row">
+        <div class="field">
+          <div class="label">受访者</div>
+          <div class="value">张琪</div>
+        </div>
+        <div class="field">
+          <div class="label">性别</div>
+          <div class="value">女</div>
+        </div>
+        <div class="field">
+          <div class="label">年级 / 专业</div>
+          <div class="value">大三 / 环境工程</div>
+        </div>
+        <div class="field">
+          <div class="label">访谈地点</div>
+          <div class="value">山东大学青岛校区 振声苑</div>
+        </div>
+        <div class="field">
+          <div class="label">访谈者</div>
+          <div class="value">葛峣</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="card">
+      <h2>开场</h2>
+      <div class="qa">
+        <p class="question"><strong>访谈者：</strong>您好，我们正在研究一款校园节能提醒App，想听听您的实际使用体验与看法。</p>
+        <p class="answer"><strong>张琪：</strong>好的，我挺关注这方面的。</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>热身问题</h2>
+      <div class="qa">
+        <p class="question"><strong>问：</strong>请简单介绍一下您的学习生活场景？</p>
+        <p class="answer"><strong>答：</strong>我是环境工程专业大三的学生，平时课程多、实验多，经常在实验室或图书馆。</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Topic 1：节能习惯与认知</h2>
+      <div class="qa">
+        <p class="question"><strong>问：</strong>您平时在校园中最关注哪些能源使用场景？</p>
+        <p class="answer"><strong>答：</strong>宿舍的空调和吹风机，还有实验室仪器。</p>
+
+        <p class="question"><strong>问（跟进）：</strong>为什么这些会让您特别注意？</p>
+        <p class="answer"><strong>答：</strong>因为空调很费电，宿舍电费经常超标。</p>
+
+        <p class="question"><strong>问：</strong>您会主动关闭电源吗？</p>
+        <p class="answer"><strong>答：</strong>会，我们宿舍互相提醒，大家都挺自觉。</p>
+
+        <p class="question"><strong>问：</strong>您觉得节能中最大的难点是什么？</p>
+        <p class="answer"><strong>答：</strong>插排太多，拔插头麻烦，有时候就懒得动。</p>
+
+        <p class="question"><strong>问：</strong>如果App能提供节能帮助，您希望它怎么做？</p>
+        <p class="answer"><strong>答：</strong>想要有宿舍用电趋势图，还有节能建议，比如“今天空调用电超标”。</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Topic 2：校园日常流程与能源使用</h2>
+      <div class="qa">
+        <p class="question"><strong>问：</strong>请您描述一下在教室的用电流程？</p>
+        <p class="answer"><strong>答：</strong>到教室开灯、插电脑，离开时一般不会检查灯。</p>
+
+        <p class="question"><strong>问：</strong>哪个环节最浪费？</p>
+        <p class="answer"><strong>答：</strong>教室灯白天也开着，很多人没意识。</p>
+
+        <p class="question"><strong>问：</strong>哪些设备应优先提醒或控制？</p>
+        <p class="answer"><strong>答：</strong>照明和空调。</p>
+
+        <p class="question"><strong>问：</strong>请对学校节能管理满意度打分。</p>
+        <p class="answer"><strong>答：</strong>我给4分吧，学校宣传挺多，但希望更智能。</p>
+
+        <p class="question"><strong>问：</strong>您怎么看待当前校园能源使用状况？</p>
+        <p class="answer"><strong>答：</strong>总体意识不错，但缺乏数据化管理。</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Topic 3：信息获取与协作</h2>
+      <div class="qa">
+        <p class="question"><strong>问：</strong>您通常如何了解节能信息？</p>
+        <p class="answer"><strong>答：</strong>学校公众号、活动宣传。</p>
+
+        <p class="question"><strong>问：</strong>当想确认宿舍是否浪费能源时，您会遇到哪些问题？</p>
+        <p class="answer"><strong>答：</strong>没法实时看到数据。</p>
+
+        <p class="question"><strong>问：</strong>节能是否依赖集体？</p>
+        <p class="answer"><strong>答：</strong>是的，一个人努力没用。</p>
+
+        <p class="question"><strong>问：</strong>您希望通过什么方式共享节能信息？</p>
+        <p class="answer"><strong>答：</strong>宿舍群最方便，如果App能发统计图也挺好。</p>
+
+        <p class="question"><strong>问：</strong>如果App能自动整合节能数据，您希望解决哪些问题？</p>
+        <p class="answer"><strong>答：</strong>能耗对比、节能排名，这样会更有动力。</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Closing</h2>
+      <div class="qa">
+        <p class="answer"><strong>访谈者：</strong>感谢您宝贵的建议。</p>
+      </div>
+    </section>
+
+    <footer>
+      <div>记录说明：该页面为访谈记录展示，已按主题和问答格式整理。可直接打印或导出为 PDF 以供分析使用。</div>
+      <div class="tools">
+        <button onclick="window.print()">打印 / 导出为 PDF</button>
+        <button class="secondary" onclick="location.reload()">刷新页面</button>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
